@@ -1,99 +1,47 @@
 
-import React        from 'react';
-import { observer } from 'mobx-react';
-import UserStore    from './stores/UserStore';
-import LoginForm    from './stores/LoginForm';
-import SubmitButton from './stores/SubmitButton';
-import './index.css';
-class App extends React.Component {
-  async componentDidMount() {
-    try {
-      let res = await fetch('/isLoggedIn', {
-        method: 'post',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        }
-      });
-      let result = await res.json();
-      if (result && result.success){
-        UserStore.loading = false;
-        UserStore.isLoggedIn = true;
-        UserStore.username = result.username;
-      }
-      else {
-          UserStore.loading = false;
-          UserStore.isLoggedIn = false;
-      }
-    }
-    catch(e) {
-        UserStore.loading = false;
-        UserStore.isLoggedIn = false;
-    }
+import React, { useState } from "react";
+import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import "./login.css";
+import Login from "./containers/Login";
+
+
+export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function validateForm() {
+    return email.length > 0 && password.length > 0;
   }
-  async doLogout() {
-    try {
-      let res = await fetch('/logout', {
-        method: 'post',
-        headers: {
-          'Accept': 'application/json',
-          'Content-type': 'application/json'
-        }
-      });
-      let result = await res.json();
-      if (result && result.success){
-        UserStore.isLoggedIn = false;
-        UserStore.username = '';
-      }
-      else {
-          UserStore.loading = false;
-          UserStore.isLoggedIn = false;
-      }
-    }
-    catch(e) {
-        console.log(e)
-    }
+
+  function handleSubmit(event) {
+    event.preventDefault();
   }
-  render() {
-    if (UserStore.loading) {
-        return (
-          <div className='app'>
-              <div className='container'>
-                Loading, please wait. .
-              </div>
-          </div>
-        );
-    }
-    else {
-        if (UserStore.isLoggedIn) {
-          return (
-            <div className='app'>
-                <div className='container'>
-                  Welcome {UserStore.username}
-                  <SubmitButton
-                      text={'Log out'}
-                      disabled={false}
-                      onClick={ () => this.doLogout() }
-                  />
-                </div>
-            </div>
-          );
-      }
-         return (
-              <div className="app">
-                  <div className="app">
-                      <div className='container'>
-                      <SubmitButton
-                      text={'Log out'}
-                      disabled={false}
-                      onClick={ () => this.doLogout() }
-                      />
-                        <LoginForm />
-                      </div>
-                  </div>
-              </div>
-        );
-      }
-    }
-  }
-export default observer(App)
+
+  return (
+  
+    <div className="Login">
+      <form onSubmit={handleSubmit}>
+        <FormGroup controlId="email" bsSize="large">
+          <ControlLabel>Email</ControlLabel>
+          <FormControl
+            autoFocus
+            type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
+        </FormGroup>
+        <FormGroup controlId="password" bsSize="large">
+          <ControlLabel>Password</ControlLabel>
+          <FormControl
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            type="password"
+          />
+        </FormGroup>
+        <Button block bsSize="large" disabled={!validateForm()} type="submit">
+          Login
+        </Button>
+      </form>
+    </div>
+  );
+}
