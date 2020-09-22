@@ -1,9 +1,6 @@
-
 import React, { useState } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import "./login.css";
-import Login from "./containers/Login";
-
+import "./Login.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -18,7 +15,6 @@ export default function Login() {
   }
 
   return (
-  
     <div className="Login">
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="email" bsSize="large">

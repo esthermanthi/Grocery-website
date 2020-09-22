@@ -2,22 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+
 export default class Products extends React.Component{
   constructor(props){
     super(props)
     this.state={
       type:["Vegetables","fruits"],
-      name:["Onions","Bananas","Kales","Melons","Pineaple","Mangoes","Cucumber","Carrots","Tomatoes"],
-      quantity:[90,40,150,130,140,70,140,30,170,],
-      price:[140,60,125,240,360,250,600,450,300],
+      name:["Onions","kales","Carrots","Cucumber","Tomatoes","Garlic","Green Peas","Ginger","Red Cabbage","Mangoes","Melons","bananas","pineaple","Grape fruit","Avocado"],
+      quantity:[90,40,150,130,140,100,200,70,140,30,170,200,300,200,400],
+      price:[140,60,125,240,360,100,200,250,600,450,300,200,250,270,50],
     
     };
   }
  
   render(){
     return(
-      <div >
+     <div>
        <h1> GREENS KIOSK</h1>
+
+       <div className="add">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSv375EMjWEJDPGoXyC36Klam-IhrbFCrPVng&usqp=CAU"></img>
+       <p class="image description">Eat healthy,stay healthy</p>  
+       </div>
+       <h1>Products</h1>
        <div className="product">
            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0tS7FPnR37UpBfNwu7jWh7EO6DEJ2W3G2Fg&usqp=CAU"></img>
            <div className="pad">
@@ -30,7 +37,7 @@ export default class Products extends React.Component{
           
       
         </div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7DfWv5EncXWf0fkLaKX9KQx7ptFfMi6_rqA&usqp=CAU"></img>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQH7Jpk2JjZfk63rtoaUfM8dK38Ca-j-FFPA&usqp=CAU"></img>
           <div className="pad">
           <p>Name:{this.state.name[1]}</p>
            <p>Type:{this.state.type[1]}</p>
@@ -40,7 +47,7 @@ export default class Products extends React.Component{
 
 </div>
         
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQH7Jpk2JjZfk63rtoaUfM8dK38Ca-j-FFPA&usqp=CAU"></img>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZVlO0X7ZvmfiRS4hfoIPQeY8p5Fb7Eh9cFQ&usqp=CAU"></img>
           <div className="pad">
           <p>Name:{this.state.name[2]}</p>
           <p>Type:Vegetables{this.state.type[2]}</p>
@@ -48,7 +55,7 @@ export default class Products extends React.Component{
           <p> Price:{this.state.price[2]}</p>
           <input type="button" class="button" value="Add To Cart"></input>
          </div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRDm_GjH4gCz0EehhGpEb9q8fTkw0JnDEhwxg&usqp=CAU"></img>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTpb0HYz9t8CopxGd1_XBvEdm1WBCH3Np_mjw&usqp=CAU"></img>
           <div className="pad">
            <p>Name:{this.state.name[3]}</p>
            <p>Type: Fruits{this.state.type[3]}</p>
@@ -57,7 +64,7 @@ export default class Products extends React.Component{
            <input type="button" class="button" value="Add To Cart"></input>
 
           </div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT6o98-D42fEchy6hUbBh0uyZD9nMpz9JmLSw&usqp=CAU"></img>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTwhXZtc-HDtHv4a7AaFR0gl-NhpeXo9XJF6A&usqp=CAU"></img>
           <div className="pad">
             <p>Name:{this.state.name[4]}</p>
             <p>Type: fruits{this.state.type[4]}</p>
@@ -66,48 +73,141 @@ export default class Products extends React.Component{
             <input type="button" class="button" value="Add To Cart"></input>
 
             </div>
-         
-           
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQy1hwJxkUSLaKAcW9dwzMtZwnAMmRsXSQ1Gg&usqp=CAU"></img>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQrT9HvcBXh4y0Qu-suWNT_fmHbymujAos0rw&usqp=CAU"></img>
           <div className="pad">
-          <p>Name:{this.state.name[6]}</p>
-          <p>Type: fruits{this.state.type[6]}</p>
-          <p> Quantity:{this.state.quantity[6]}</p>
-          <p> Price:{this.state.price[6]}</p>
-          <input type="button" class="button" value="Add To Cart"></input>
+            <p>Name:{this.state.name[5]}</p>
+            <p>Type: fruits{this.state.type[5]}</p>
+            <p> Quantity:{this.state.quantity[5]}</p>
+            <p> Price:{this.state.price[5]}</p>
+            <input type="button" class="button" value="Add To Cart"></input>
 
-</div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTpb0HYz9t8CopxGd1_XBvEdm1WBCH3Np_mjw&usqp=CAU"></img>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRe8gIaBImRho4WFPT6E5LPOhLa3hebgj1jIA&usqp=CAU"></img>
+          <div className="pad">
+            <p>Name:{this.state.name[6]}</p>
+            <p>Type: fruits{this.state.type[6]}</p>
+            <p> Quantity:{this.state.quantity[6]}</p>
+            <p> Price:{this.state.price[6]}</p>
+            <input type="button" class="button" value="Add To Cart"></input>
+
+            </div>
+ 
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSJwUpiuUUTFpY9ZRMTT0s5vqUcobF9HsL_-w&usqp=CAU"></img>
           <div className="pad">
           <p>Name:{this.state.name[7]}</p>
-          <p>Type: Vegetables{this.state.type[7]}</p>
+          <p>Type: fruits{this.state.type[7]}</p>
           <p> Quantity:{this.state.quantity[7]}</p>
           <p> Price:{this.state.price[7]}</p>
           <input type="button" class="button" value="Add To Cart"></input>
 
 </div>
-        
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZVlO0X7ZvmfiRS4hfoIPQeY8p5Fb7Eh9cFQ&usqp=CAU"></img>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTqPArNTyx8zLQd2oDw_sA1Mk18VrRskQXdOw&usqp=CAU"></img>
           <div className="pad">
           <p>Name:{this.state.name[8]}</p>
-          <p>Type: Vegetables{this.state.type[8]}</p>
+          <p>Type: fruits{this.state.type[8]}</p>
           <p> Quantity:{this.state.quantity[8]}</p>
           <p> Price:{this.state.price[8]}</p>
           <input type="button" class="button" value="Add To Cart"></input>
 
 </div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTwhXZtc-HDtHv4a7AaFR0gl-NhpeXo9XJF6A&usqp=CAU"></img>
-         
+
+
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRdgFx1krcf-QA7LYoQaBuhgj-4-VAEkIL3lA&usqp=CAU"></img>
           <div className="pad">
-            <p>Name:{this.state.name[9]}</p>
-          <p>Type: Vegetables{this.state.type[9]}</p>
+          <p>Name:{this.state.name[9]}</p>
+          <p>Type: fruits{this.state.type[9]}</p>
           <p> Quantity:{this.state.quantity[9]}</p>
           <p> Price:{this.state.price[9]}</p>
+          <input type="button" class="button" value="Add To Cart"></input>
+
+</div>
+
+
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRDm_GjH4gCz0EehhGpEb9q8fTkw0JnDEhwxg&usqp=CAU"></img>
+          <div className="pad">
+          <p>Name:{this.state.name[10]}</p>
+          <p>Type: Vegetables{this.state.type[10]}</p>
+          <p> Quantity:{this.state.quantity[10]}</p>
+          <p> Price:{this.state.price[10]}</p>
+          <input type="button" class="button" value="Add To Cart"></input>
+
+</div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7DfWv5EncXWf0fkLaKX9KQx7ptFfMi6_rqA&usqp=CAU"></img>
+          <div className="pad">
+          <p>Name:{this.state.name[11]}</p>
+          <p>Type: Vegetables{this.state.type[11]}</p>
+          <p> Quantity:{this.state.quantity[11]}</p>
+          <p> Price:{this.state.price[11]}</p>
+          <input type="button" class="button" value="Add To Cart"></input>
+
+</div>
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT6o98-D42fEchy6hUbBh0uyZD9nMpz9JmLSw&usqp=CAU"></img>
+          <div className="pad">
+            <p>Name:{this.state.name[12]}</p>
+          <p>Type: Vegetables{this.state.type[12]}</p>
+          <p> Quantity:{this.state.quantity[12]}</p>
+          <p> Price:{this.state.price[12]}</p>
 
           <input type="button" class="button" value="Add To Cart"></input>
           </div>
+          
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBufdwg5Mun6CZVQBeoo8C4FaMxiQ9wrbSsQ&usqp=CAU"></img>
+          <div className="pad">
+            <p>Name:{this.state.name[13]}</p>
+          <p>Type: Vegetables{this.state.type[13]}</p>
+          <p> Quantity:{this.state.quantity[13]}</p>
+          <p> Price:{this.state.price[13]}</p>
+
+          <input type="button" class="button" value="Add To Cart"></input>
+          </div>
+
+
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQuU4dk8AOQZLtXQehAs4_1K1Sk4UkKUkCCQA&usqp=CAU"></img>
+          <div className="pad">
+            <p>Name:{this.state.name[14]}</p>
+          <p>Type: Vegetables{this.state.type[14]}</p>
+          <p> Quantity:{this.state.quantity[14]}</p>
+          <p> Price:{this.state.price[14]}</p>
+          <input type="button" class="button" value="Add To Cart"></input>
+          </div>
+          <div className="footer">
+<footer id="footer">
+  <div className="container1"></div>
+  <div className="row">
+    <div className="col-md-3">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSBc24ruLFk3h0bUZzQnR7vQ51nkLpwC9rBlg&usqp=CAU"></img>
+      <p>WE SOURCE</p>
+    </div>
+    <div className="col-md-3">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTnMxNzMlEcsBcc-QWAl9tSyHCWXY1ZRA54Hg&usqp=CAU"></img>
+      <p>WE PACK</p>
+    </div>
+    <div className="col-md-3">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQTiXc5sUfkcv2VziXA-VX7IYQT4vmphr8ryA&usqp=CAU"></img>
+      <p>WE DELIVER</p>
+    </div>
+    <div className="col-md-3">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRquC30E8AYg9dVv0qeCcI1RjOPzemHhf9McA&usqp=CAU"></img>
+      <p>YOU ENJOY</p>
+    </div>
+    <div className="col-md-3">
+    <h4>follow us on</h4>
+					<p><i class="fa fa-facebook-official"></i>facebook</p>
+					<p><i class="fa fa-youtube-play"></i>youtube</p>
+					<p><i class="fa fa-twitter"></i>Twitter</p>
+    </div>
+  </div>
+  
+</footer>
 </div>
+          
 </div>
+
+</div>
+
+
+
     )}
 }
 ReactDOM.render(
